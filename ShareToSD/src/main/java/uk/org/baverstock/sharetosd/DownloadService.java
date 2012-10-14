@@ -6,9 +6,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
 import android.widget.Toast;
 
 import java.io.*;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.net.URL;
 import java.net.URLConnection;
 
@@ -21,7 +24,7 @@ public class DownloadService extends IntentService
 	public static final int NOTIFICATION_ID = 1;
 	private String headline;
 	public static StringBuilder log = new StringBuilder();
-	private Notifier notifier;
+	private Notifier notifier = new Notifier();
 
 	public DownloadService()
 	{
@@ -40,7 +43,6 @@ public class DownloadService extends IntentService
 			return;
 		}
 
-		notifier.notifyOf(this, "Downloading...");
 
 		Intent passedIntent = intent.getParcelableExtra("intent");
 
@@ -52,10 +54,12 @@ public class DownloadService extends IntentService
 		}
 		Uri uri = Uri.parse(intentUrl);
 
+		notifier.notifyStart(this, "Downloading...");
+
 		String contentType = null;
 		InputStream inputStream = null;
 		String path = null;
-		int size = -1;
+		long size = -1;
 		if (uri.getScheme().equals("content"))
 		{
 			try
@@ -108,7 +112,7 @@ public class DownloadService extends IntentService
 
 			if (file != null)
 			{
-				notifier.setDataAndType(null, null);
+				notifier.setDataAndType(file, contentType);
 				outcome = "Download succeeded";
 			}
 		}
@@ -116,7 +120,7 @@ public class DownloadService extends IntentService
 		notifier.notifyLast(outcome, this);
 	}
 
-	private File copyFromStream(InputStream inputStream, String path, int size)
+	private File copyFromStream(InputStream inputStream, String path, long size)
 	{
 		try
 		{
@@ -147,9 +151,17 @@ public class DownloadService extends IntentService
 			OutputStream outputStream = new FileOutputStream(outFile);
 			byte bytes[] = new byte[16365];
 			int len;
+			long seen = 0;
+			long ms = System.currentTimeMillis();
 			while ((len = inputStream.read(bytes)) > 0)
 			{
 				outputStream.write(bytes, 0, len);
+				seen += len;
+				if (size > -1 && ms + 1000 > System.currentTimeMillis())
+				{
+					ms = System.currentTimeMillis();
+					notifier.notifyUpdate(this, seen, size);
+				}
 			}
 			outputStream.close();
 			inputStream.close();
@@ -218,15 +230,22 @@ public class DownloadService extends IntentService
 		private Intent launchIntent;
 		private PendingIntent pendingIntent;
 
-		public void notifyOf(Context context, String s)
+		public void notifyStart(Context context, String s)
 		{
 			notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-			notification = new Notification(R.drawable.icon, "Downloading...", 100 /* milliseconds */);
-			notification.flags |= Notification.FLAG_ONGOING_EVENT;
+			notification = new Notification(R.drawable.icon, "Downloading...", 10 /* milliseconds */);
+			notification.flags |= Notification.FLAG_ONGOING_EVENT | Notification.FLAG_FOREGROUND_SERVICE;
 			launchIntent = new Intent(context, ShareToSD.class);
 			pendingIntent = PendingIntent.getActivity(context, 1, launchIntent, PendingIntent.FLAG_CANCEL_CURRENT);
 			notification.setLatestEventInfo(context, "Downloading", headline, pendingIntent);
-			notificationManager.notify(NOTIFICATION_ID, notification);
+			startForegroundCompat(NOTIFICATION_ID, notification);
+		}
+
+		public void notifyUpdate(Context context, long seen, long want)
+		{
+			long pct = 100 * seen / want;
+			notification.setLatestEventInfo(context, "Downloaded " + pct + "% (" + seen + "/" + want + ")", headline, pendingIntent);
+			mNM.notify(NOTIFICATION_ID, notification);
 		}
 
 		public void setDataAndType(File file, String contentType)
@@ -237,9 +256,108 @@ public class DownloadService extends IntentService
 		private void notifyLast(String outcome, DownloadService downloadService)
 		{
 			pendingIntent = PendingIntent.getActivity(downloadService, 1, launchIntent, PendingIntent.FLAG_CANCEL_CURRENT);
-			notification.flags &= ~ Notification.FLAG_ONGOING_EVENT;
+			notification.flags &= ~ (Notification.FLAG_ONGOING_EVENT | Notification.FLAG_FOREGROUND_SERVICE);
 			notification.setLatestEventInfo(downloadService, outcome, headline, pendingIntent);
-			notificationManager.notify(1, notification);
+			stopForegroundCompat(NOTIFICATION_ID);
+			mNM.notify(NOTIFICATION_ID, notification);
 		}
+	}
+
+
+	// ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	private static final Class<?>[] mSetForegroundSignature = new Class[] {
+			boolean.class};
+	private static final Class<?>[] mStartForegroundSignature = new Class[] {
+			int.class, Notification.class};
+	private static final Class<?>[] mStopForegroundSignature = new Class[] {
+			boolean.class};
+
+	private NotificationManager mNM;
+	private Method mSetForeground;
+	private Method mStartForeground;
+	private Method mStopForeground;
+	private Object[] mSetForegroundArgs = new Object[1];
+	private Object[] mStartForegroundArgs = new Object[2];
+	private Object[] mStopForegroundArgs = new Object[1];
+
+	void invokeMethod(Method method, Object[] args) {
+		try {
+			method.invoke(this, args);
+		} catch (InvocationTargetException e) {
+			// Should not happen.
+			Log.w("ApiDemos", "Unable to invoke method", e);
+		} catch (IllegalAccessException e) {
+			// Should not happen.
+			Log.w("ApiDemos", "Unable to invoke method", e);
+		}
+	}
+
+	/**
+	 * This is a wrapper around the new startForeground method, using the older
+	 * APIs if it is not available.
+	 */
+	void startForegroundCompat(int id, Notification notification) {
+		// If we have the new startForeground API, then use it.
+		if (mStartForeground != null) {
+			mStartForegroundArgs[0] = Integer.valueOf(id);
+			mStartForegroundArgs[1] = notification;
+			invokeMethod(mStartForeground, mStartForegroundArgs);
+			return;
+		}
+
+		// Fall back on the old API.
+		mSetForegroundArgs[0] = Boolean.TRUE;
+		invokeMethod(mSetForeground, mSetForegroundArgs);
+		mNM.notify(id, notification);
+	}
+
+	/**
+	 * This is a wrapper around the new stopForeground method, using the older
+	 * APIs if it is not available.
+	 */
+	void stopForegroundCompat(int id) {
+		// If we have the new stopForeground API, then use it.
+		if (mStopForeground != null) {
+			mStopForegroundArgs[0] = Boolean.TRUE;
+			invokeMethod(mStopForeground, mStopForegroundArgs);
+			return;
+		}
+
+		// Fall back on the old API.  Note to cancel BEFORE changing the
+		// foreground state, since we could be killed at that point.
+		mNM.cancel(id);
+		mSetForegroundArgs[0] = Boolean.FALSE;
+		invokeMethod(mSetForeground, mSetForegroundArgs);
+	}
+
+	@Override
+	public void onCreate() {
+		super.onCreate();
+		mNM = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
+		try {
+			mStartForeground = getClass().getMethod("startForeground",
+					mStartForegroundSignature);
+			mStopForeground = getClass().getMethod("stopForeground",
+					mStopForegroundSignature);
+			return;
+		} catch (NoSuchMethodException e) {
+			// Running on an older platform.
+			mStartForeground = mStopForeground = null;
+		}
+		try {
+			mSetForeground = getClass().getMethod("setForeground",
+					mSetForegroundSignature);
+		} catch (NoSuchMethodException e) {
+			throw new IllegalStateException(
+					"OS doesn't have Service.startForeground OR Service.setForeground!");
+		}
+	}
+
+	@Override
+	public void onDestroy() {
+		// Make sure our notification is gone.
+		stopForegroundCompat(R.string.foreground_service_started);
+		super.onDestroy();
 	}
 }

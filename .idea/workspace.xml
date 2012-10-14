@@ -12,7 +12,12 @@
     </option>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15f001f8-8b57-47a4-aee7-957b34fe9463" name="Default" comment="" />
+    <list default="true" id="15f001f8-8b57-47a4-aee7-957b34fe9463" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/res/values/strings.xml" afterPath="$PROJECT_DIR$/ShareToSD/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadService.java" afterPath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadService.java" />
+    </list>
     <ignored path="ShareToSD-parent.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -86,10 +91,19 @@
       <file leaf-file-name="DownloadService.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="4" selection-start="2646" selection-end="2646" vertical-scroll-proportion="0.93890023">
+            <state line="258" column="37" selection-start="6689" selection-end="6689" vertical-scroll-proportion="0.23413567">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Uri.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/google/android/android/2.3.3/android-2.3.3.jar!/android/net/Uri.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="119" column="0" selection-start="4885" selection-end="4885" vertical-scroll-proportion="-6.08">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,7 +120,7 @@
       <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ShareToSD/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="38" selection-start="245" selection-end="245" vertical-scroll-proportion="-2.5">
+            <state line="6" column="62" selection-start="317" selection-end="317" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
@@ -115,7 +129,7 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ShareToSD/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="565" selection-end="565" vertical-scroll-proportion="-7.5">
+            <state line="27" column="0" selection-start="1196" selection-end="1196" vertical-scroll-proportion="-16.875">
               <folding />
             </state>
           </provider>
@@ -137,15 +151,18 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/HelloAndroidActivity.java" />
-        <option value="$PROJECT_DIR$/ShareToSD/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/ShareToSD/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/ServiceRedirect.java" />
-        <option value="$PROJECT_DIR$/ShareToSD/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/ShareToSD.java" />
+        <option value="$PROJECT_DIR$/ShareToSD/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/ShareToSD/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadService.java" />
       </list>
     </option>
@@ -166,7 +183,7 @@
     <option name="width" value="1379" />
     <option name="height" value="920" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -271,6 +288,28 @@
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShareToSD-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShareToSD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShareToSD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -352,7 +391,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="preferences.sourceCode.Java" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -598,10 +637,10 @@
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32769832" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24905661" sideWeight="0.6723017" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32769832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32769832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -667,13 +706,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ShareToSD/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="38" selection-start="245" selection-end="245" vertical-scroll-proportion="-2.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ShareToSD/res/layout/main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="41" selection-start="323" selection-end="323" vertical-scroll-proportion="-4.375">
@@ -696,9 +728,30 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/ServiceRedirect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="29" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ShareToSD/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="565" selection-end="565" vertical-scroll-proportion="-7.5">
+        <state line="27" column="0" selection-start="1196" selection-end="1196" vertical-scroll-proportion="-16.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareToSD/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="62" selection-start="317" selection-end="317" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/android/android/2.3.3/android-2.3.3.jar!/android/net/Uri.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="0" selection-start="4885" selection-end="4885" vertical-scroll-proportion="-6.08">
           <folding />
         </state>
       </provider>
@@ -715,16 +768,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/ServiceRedirect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="29" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="4" selection-start="2646" selection-end="2646" vertical-scroll-proportion="0.93890023">
+        <state line="258" column="37" selection-start="6689" selection-end="6689" vertical-scroll-proportion="0.23413567">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
