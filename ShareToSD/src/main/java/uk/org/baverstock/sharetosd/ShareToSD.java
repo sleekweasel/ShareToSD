@@ -43,7 +43,7 @@ public class ShareToSD extends Activity
 			return;
 		}
 
-		textView.append("\ndataString " + data);
+		textView.append("\n* dataString " + data);
 
 		final File file = new File(data.getPath());
 

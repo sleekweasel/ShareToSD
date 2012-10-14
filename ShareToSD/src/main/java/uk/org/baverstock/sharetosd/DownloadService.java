@@ -157,7 +157,7 @@ public class DownloadService extends IntentService
 			{
 				outputStream.write(bytes, 0, len);
 				seen += len;
-				if (size > -1 && ms + 1000 > System.currentTimeMillis())
+				if (size > -1 && ms + 1000 < System.currentTimeMillis())
 				{
 					ms = System.currentTimeMillis();
 					notifier.notifyUpdate(this, seen, size);
@@ -219,7 +219,7 @@ public class DownloadService extends IntentService
 
 	private void tell(final String s)
 	{
-		log.append(s + "\n");
+		log.append("* " + s + "\n");
 	}
 
 	private class Notifier
