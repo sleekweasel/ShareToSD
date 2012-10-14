@@ -86,7 +86,7 @@
       <file leaf-file-name="DownloadService.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="889" selection-end="889" vertical-scroll-proportion="0.030549899">
+            <state line="118" column="4" selection-start="2646" selection-end="2646" vertical-scroll-proportion="0.93890023">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -724,7 +724,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="889" selection-end="889" vertical-scroll-proportion="0.030549899">
+        <state line="118" column="4" selection-start="2646" selection-end="2646" vertical-scroll-proportion="0.93890023">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

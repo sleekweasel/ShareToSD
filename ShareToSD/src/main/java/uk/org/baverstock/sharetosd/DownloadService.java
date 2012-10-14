@@ -21,6 +21,7 @@ public class DownloadService extends IntentService
 	public static final int NOTIFICATION_ID = 1;
 	private String headline;
 	public static StringBuilder log = new StringBuilder();
+	private Notifier notifier;
 
 	public DownloadService()
 	{
@@ -39,13 +40,7 @@ public class DownloadService extends IntentService
 			return;
 		}
 
-		NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-		Notification notification = new Notification(R.drawable.icon, "Downloading...", 100 /* milliseconds */);
-		notification.flags |= Notification.FLAG_ONGOING_EVENT;
-		Intent launchIntent = new Intent(this, ShareToSD.class);
-		PendingIntent pendingIntent = PendingIntent.getActivity(this, 1, launchIntent, PendingIntent.FLAG_CANCEL_CURRENT);
-		notification.setLatestEventInfo(this, "Downloading", headline, pendingIntent);
-		notificationManager.notify(NOTIFICATION_ID, notification);
+		notifier.notifyOf(this, "Downloading...");
 
 		Intent passedIntent = intent.getParcelableExtra("intent");
 
@@ -113,15 +108,12 @@ public class DownloadService extends IntentService
 
 			if (file != null)
 			{
-				launchIntent.setDataAndType(Uri.fromFile(file), contentType);
+				notifier.setDataAndType(null, null);
 				outcome = "Download succeeded";
 			}
 		}
 
-		pendingIntent = PendingIntent.getActivity(this, 1, launchIntent, PendingIntent.FLAG_CANCEL_CURRENT);
-		notification.flags &= ~ Notification.FLAG_ONGOING_EVENT;
-		notification.setLatestEventInfo(this, outcome, headline, pendingIntent);
-		notificationManager.notify(1, notification);
+		notifier.notifyLast(outcome, this);
 	}
 
 	private File copyFromStream(InputStream inputStream, String path, int size)
@@ -216,5 +208,38 @@ public class DownloadService extends IntentService
 	private void tell(final String s)
 	{
 		log.append(s + "\n");
+	}
+
+	private class Notifier
+	{
+
+		private NotificationManager notificationManager;
+		private Notification notification;
+		private Intent launchIntent;
+		private PendingIntent pendingIntent;
+
+		public void notifyOf(Context context, String s)
+		{
+			notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+			notification = new Notification(R.drawable.icon, "Downloading...", 100 /* milliseconds */);
+			notification.flags |= Notification.FLAG_ONGOING_EVENT;
+			launchIntent = new Intent(context, ShareToSD.class);
+			pendingIntent = PendingIntent.getActivity(context, 1, launchIntent, PendingIntent.FLAG_CANCEL_CURRENT);
+			notification.setLatestEventInfo(context, "Downloading", headline, pendingIntent);
+			notificationManager.notify(NOTIFICATION_ID, notification);
+		}
+
+		public void setDataAndType(File file, String contentType)
+		{
+			launchIntent.setDataAndType(Uri.fromFile(file), contentType);
+		}
+
+		private void notifyLast(String outcome, DownloadService downloadService)
+		{
+			pendingIntent = PendingIntent.getActivity(downloadService, 1, launchIntent, PendingIntent.FLAG_CANCEL_CURRENT);
+			notification.flags &= ~ Notification.FLAG_ONGOING_EVENT;
+			notification.setLatestEventInfo(downloadService, outcome, headline, pendingIntent);
+			notificationManager.notify(1, notification);
+		}
 	}
 }
