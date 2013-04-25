@@ -45,6 +45,11 @@ public class DownloadService extends IntentService
 
 
 		Intent passedIntent = intent.getParcelableExtra("intent");
+        if (passedIntent == null)
+        {
+            tell("passedIntent was null(?!)");
+            return;
+        }
 
 		String intentUrl = getUrlFromIntent(passedIntent);
 		if (intentUrl == null)
@@ -52,6 +57,7 @@ public class DownloadService extends IntentService
 			tell("IntentUrl was null(?!)");
 			return;
 		}
+
 		Uri uri = Uri.parse(intentUrl);
 
 		notifier.notifyStart(this, "Downloading...");
@@ -124,6 +130,8 @@ public class DownloadService extends IntentService
 	{
 		try
 		{
+            path = path.replace(":", "%3c");
+            path = path.replace(" ", "+");
 			File outFile = new File(path);
 			int lastDot = path.lastIndexOf('.');
 			String pathLead = lastDot == -1 ? path : path.substring(0, lastDot + 1);
@@ -152,14 +160,15 @@ public class DownloadService extends IntentService
 			byte bytes[] = new byte[16365];
 			int len;
 			long seen = 0;
-			long ms = System.currentTimeMillis();
+			long lastDisplayed = System.currentTimeMillis();
 			while ((len = inputStream.read(bytes)) > 0)
 			{
 				outputStream.write(bytes, 0, len);
 				seen += len;
-				if (size > -1 && ms + 1000 < System.currentTimeMillis())
+                long now = System.currentTimeMillis();
+                if (size > -1 && lastDisplayed < now - 5000)
 				{
-					ms = System.currentTimeMillis();
+					lastDisplayed = now;
 					notifier.notifyUpdate(this, seen, size);
 				}
 			}
@@ -236,6 +245,7 @@ public class DownloadService extends IntentService
 			notification = new Notification(R.drawable.icon, "Downloading...", 10 /* milliseconds */);
 			notification.flags |= Notification.FLAG_ONGOING_EVENT | Notification.FLAG_FOREGROUND_SERVICE;
 			launchIntent = new Intent(context, ShareToSD.class);
+            launchIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 			pendingIntent = PendingIntent.getActivity(context, 1, launchIntent, PendingIntent.FLAG_CANCEL_CURRENT);
 			notification.setLatestEventInfo(context, "Downloading", headline, pendingIntent);
 			startForegroundCompat(NOTIFICATION_ID, notification);
@@ -244,7 +254,8 @@ public class DownloadService extends IntentService
 		public void notifyUpdate(Context context, long seen, long want)
 		{
 			long pct = 100 * seen / want;
-			notification.setLatestEventInfo(context, "Downloaded " + pct + "% (" + seen + "/" + want + ")", headline, pendingIntent);
+            notification.tickerText = "Downloaded " + pct + "% (" + seen + "/" + want + ")";
+            notification.setLatestEventInfo(context, notification.tickerText, headline, pendingIntent);
 			mNM.notify(NOTIFICATION_ID, notification);
 		}
 
@@ -257,7 +268,8 @@ public class DownloadService extends IntentService
 		{
 			pendingIntent = PendingIntent.getActivity(downloadService, 1, launchIntent, PendingIntent.FLAG_CANCEL_CURRENT);
 			notification.flags &= ~ (Notification.FLAG_ONGOING_EVENT | Notification.FLAG_FOREGROUND_SERVICE);
-			notification.setLatestEventInfo(downloadService, outcome, headline, pendingIntent);
+            notification.tickerText = outcome;
+			notification.setLatestEventInfo(downloadService, notification.tickerText, headline, pendingIntent);
 			stopForegroundCompat(NOTIFICATION_ID);
 			mNM.notify(NOTIFICATION_ID, notification);
 		}
