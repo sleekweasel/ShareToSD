@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 /**
- *  Redirects to the service, without starting.
+ *  Redirects to the service without starting, because nobody wants to see a download happening..
  */
 
 public class ServiceRedirect extends Activity
