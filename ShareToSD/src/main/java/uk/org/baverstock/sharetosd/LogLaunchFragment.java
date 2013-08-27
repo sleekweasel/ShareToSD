@@ -31,31 +31,5 @@ public class LogLaunchFragment extends Fragment{
         TextView textView = (TextView) getView().findViewById(R.id.log);
         textView.setText(DownloadService.log.toString());
         textView.append("\n* dataString " + data);
-
-        final File file = new File(data.getPath());
-
-        Button openDirectory = (Button) getView().findViewById(R.id.open_directory);
-        openDirectory.setText("Open " + file.getParent());
-        openDirectory.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view)
-            {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setDataAndType(Uri.fromFile(file.getParentFile()), "resource/folder");
-                startActivity(intent);
-            }
-        });
-
-        Button openFile = (Button) getView().findViewById(R.id.open_file);
-        final String type = intent.getType();
-        openFile.setText("Open " + type + " " + file.getName());
-        openFile.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View view)
-            {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setDataAndType(Uri.fromFile(file), type);
-                startActivity(intent);
-            }
-        });
     }
 }

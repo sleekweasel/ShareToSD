@@ -81,7 +81,6 @@ public class EventListFragment extends ListFragment {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-        Toast.makeText(getActivity(), "Open " + id, Toast.LENGTH_SHORT).show();
         final ContentResolver contentResolver = getActivity().getContentResolver();
         final Uri itemUrl = EVENT_CONTENT_URL.buildUpon().appendPath("" + id).build();
         openItem(contentResolver, itemUrl);
@@ -127,10 +126,9 @@ public class EventListFragment extends ListFragment {
         new Thread() {
             @Override
             public void run() {
-                Cursor query = contentResolver.query(itemUrl, new String[]{EVENT_KEY_FILE, EVENT_KEY_TYPE}, null, null, null);
+                Cursor query = contentResolver.query(itemUrl, new String[]{EVENT_KEY_FILE}, null, null, null);
                 if (query.moveToFirst()) {
                     File file = new File(query.getString(0));
-                    String type = query.getString(1);
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     intent.setDataAndType(Uri.fromFile(file.getParentFile()), "resource/folder");
                     startActivity(intent);
