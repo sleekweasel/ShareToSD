@@ -52,7 +52,8 @@ public class EventListFragment extends ListFragment {
         super.onActivityCreated(savedInstanceState);
 
         Cursor awaitingLoader = null;
-        adapter = new SimpleCursorAdapter(getActivity(), android.R.layout.simple_list_item_2, awaitingLoader, FROM_COLUMNS, TO_VIEWS, 0);
+        adapter = new SimpleCursorAdapter(getActivity(), android.R.layout.simple_list_item_2, awaitingLoader,
+                FROM_COLUMNS, TO_VIEWS, 0);
         setListAdapter(adapter);
 
         registerForContextMenu(getListView());
@@ -136,7 +137,8 @@ public class EventListFragment extends ListFragment {
         new Thread() {
             @Override
             public void run() {
-                Cursor query = contentResolver.query(itemUrl, new String[]{EVENT_KEY_FILE, EVENT_KEY_TYPE}, null, null, null);
+                Cursor query = contentResolver.query(itemUrl, new String[]{EVENT_KEY_FILE, EVENT_KEY_TYPE}, null, null,
+                        null);
                 if (query.moveToFirst()) {
                     File file = new File(query.getString(0));
                     String type = query.getString(1);

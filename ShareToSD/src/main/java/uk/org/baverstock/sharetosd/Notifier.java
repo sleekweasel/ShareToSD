@@ -9,8 +9,7 @@ import android.net.Uri;
 
 import java.io.File;
 
-class Notifier
-{
+class Notifier {
     private NotificationManager notificationManager;
     private PersistentNotification peristentNotification;
     private Notification notification;
@@ -22,8 +21,7 @@ class Notifier
         this.peristentNotification = peristentNotification;
     }
 
-    public void notifyStart(Context context, String s, CharSequence headline)
-    {
+    public void notifyStart(Context context, String s, CharSequence headline) {
         notification = new Notification(R.drawable.icon, "Downloading...", 10 /* milliseconds */);
         notification.flags |= Notification.FLAG_ONGOING_EVENT | Notification.FLAG_FOREGROUND_SERVICE;
         launchIntent = new Intent(context, ShareToSD.class);
@@ -33,23 +31,20 @@ class Notifier
         peristentNotification.startForegroundCompat(DownloadService.NOTIFICATION_ID, notification);
     }
 
-    public void notifyUpdate(Context context, long seen, long want, CharSequence headline)
-    {
+    public void notifyUpdate(Context context, long seen, long want, CharSequence headline) {
         long pct = 100 * seen / want;
         notification.tickerText = "Downloaded " + pct + "% (" + seen + "/" + want + ")";
         notification.setLatestEventInfo(context, notification.tickerText, headline, pendingIntent);
         notificationManager.notify(DownloadService.NOTIFICATION_ID, notification);
     }
 
-    public void setDataAndType(File file, String contentType)
-    {
+    public void setDataAndType(File file, String contentType) {
         launchIntent.setDataAndType(Uri.fromFile(file), contentType);
     }
 
-    public void notifyLast(String outcome, DownloadService downloadService, CharSequence headline)
-    {
+    public void notifyLast(String outcome, DownloadService downloadService, CharSequence headline) {
         pendingIntent = PendingIntent.getActivity(downloadService, 1, launchIntent, PendingIntent.FLAG_CANCEL_CURRENT);
-        notification.flags &= ~ (Notification.FLAG_ONGOING_EVENT | Notification.FLAG_FOREGROUND_SERVICE);
+        notification.flags &= ~(Notification.FLAG_ONGOING_EVENT | Notification.FLAG_FOREGROUND_SERVICE);
         notification.tickerText = outcome;
         notification.setLatestEventInfo(downloadService, notification.tickerText, headline, pendingIntent);
         peristentNotification.stopForegroundCompat(DownloadService.NOTIFICATION_ID);

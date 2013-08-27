@@ -6,7 +6,7 @@ public class DownloadEventsContract {
     public static final String EVENT_KEY_ID = "_id";
     public static final String EVENT_KEY_URL = "url";
     public static final String EVENT_KEY_DATE = "date";
-    public static final String EVENT_KEY_FILE  = "file";
+    public static final String EVENT_KEY_FILE = "file";
     public static final String EVENT_KEY_TYPE = "type";
     public static final String EVENT_TABLE = "event";
 

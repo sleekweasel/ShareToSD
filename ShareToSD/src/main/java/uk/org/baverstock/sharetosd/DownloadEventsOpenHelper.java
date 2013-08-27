@@ -32,7 +32,7 @@ public class DownloadEventsOpenHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         Log.d(this.getClass().getSimpleName(), "Dropping table due to " + oldVersion + "<" + newVersion);
-        db.execSQL("drop table if exists "+ EVENT_TABLE);
+        db.execSQL("drop table if exists " + EVENT_TABLE);
         onCreate(db);
     }
 }

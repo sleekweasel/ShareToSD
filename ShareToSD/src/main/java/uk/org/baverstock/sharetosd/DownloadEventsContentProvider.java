@@ -31,6 +31,7 @@ public class DownloadEventsContentProvider extends ContentProvider {
     }
 
     static final UriMatcher matcher = new UriMatcher(NO_MATCH.ordinal());
+
     static {
         matcher.addURI(AUTHORITY, EVENT_PATH + "/#", EVENT_ITEM.ordinal());
         matcher.addURI(AUTHORITY, EVENT_PATH, EVENT_DIR.ordinal());
@@ -39,6 +40,7 @@ public class DownloadEventsContentProvider extends ContentProvider {
     private DownloadEventsOpenHelper dbHelper;
 
     private SQLiteDatabase getReadableDatabase() { return dbHelper.getReadableDatabase(); }
+
     private SQLiteDatabase getWriteableDatabase() { return dbHelper.getWritableDatabase(); }
 
     @Override
@@ -68,8 +70,8 @@ public class DownloadEventsContentProvider extends ContentProvider {
         }
 
         String orderBy = TextUtils.isEmpty(sortOrder)
-                                   ? EVENT_DEFAULT_SORT_ORDER
-                                   : sortOrder;
+                ? EVENT_DEFAULT_SORT_ORDER
+                : sortOrder;
         String groupBy = null;
         String having = null;
 
@@ -116,8 +118,7 @@ public class DownloadEventsContentProvider extends ContentProvider {
     }
 
     @Override
-    public int update(Uri uri, ContentValues contentValues, String where, String[] whereArgs)
-    {
+    public int update(Uri uri, ContentValues contentValues, String where, String[] whereArgs) {
         int count;
         switch (Match.values()[matcher.match(uri)]) {
             case EVENT_DIR:

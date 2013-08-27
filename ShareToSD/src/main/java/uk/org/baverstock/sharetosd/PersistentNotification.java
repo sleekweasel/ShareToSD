@@ -8,19 +8,11 @@ import android.util.Log;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-
-/**
- *
- */
-
 class PersistentNotification {
 
-    private static final Class<?>[] mSetForegroundSignature = new Class[] {
-            boolean.class};
-    private static final Class<?>[] mStartForegroundSignature = new Class[] {
-            int.class, Notification.class};
-    private static final Class<?>[] mStopForegroundSignature = new Class[] {
-            boolean.class};
+    private static final Class<?>[] mSetForegroundSignature = new Class[]{boolean.class};
+    private static final Class<?>[] mStartForegroundSignature = new Class[]{int.class, Notification.class};
+    private static final Class<?>[] mStopForegroundSignature = new Class[]{boolean.class};
 
     private NotificationManager notificationManager;
     private Service service;
