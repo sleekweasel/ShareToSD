@@ -20,7 +20,9 @@
         </activity>
 
         <service android:name=".DownloadService"/>
-
+        <provider
+                android:name=".DownloadEventsContentProvider"
+                android:authorities="uk.org.baverstock.ShareToSD.provider" />
     </application>
 
     <uses-permission android:name="android.permission.INTERNET"/>

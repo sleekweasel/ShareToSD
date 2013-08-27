@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+              android:orientation="horizontal"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
         >
     <fragment
-            android:layout_height="0dp"
-            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_width="0dp"
             android:layout_weight="1"
             class="uk.org.baverstock.sharetosd.LogLaunchFragment" />
-    <ImageView android:layout_height="1dp"
-               android:layout_width="fill_parent"
+    <ImageView android:layout_width="1dp"
+               android:layout_height="fill_parent"
                android:background="#888"
-            />
+               />
     <fragment
-            android:layout_height="0dp"
-            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_width="0dp"
             android:layout_weight="1"
             class="uk.org.baverstock.sharetosd.EventListFragment"/>
 </LinearLayout>

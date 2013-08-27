@@ -37,6 +37,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: xpp3:xpp3:1.1.4c" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.json:json:20080701" level="project" />
     <orderEntry type="library" name="Maven: de.akquinet.android.androlog:androlog:1.0.5" level="project" />
+    <orderEntry type="library" name="android-support-v4" level="project" />
   </component>
   <component name="POM File Configuration" pomFile="" />
 </module>

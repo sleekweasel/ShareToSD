@@ -2,6 +2,7 @@ package uk.org.baverstock.sharetosd;
 
 import android.app.Notification;
 import android.app.NotificationManager;
+import android.app.Service;
 import android.util.Log;
 
 import java.lang.reflect.InvocationTargetException;
@@ -22,6 +23,7 @@ class PersistentNotification {
             boolean.class};
 
     private NotificationManager notificationManager;
+    private Service service;
     private Method mSetForeground;
     private Method mStartForeground;
     private Method mStopForeground;
@@ -29,12 +31,13 @@ class PersistentNotification {
     private Object[] mStartForegroundArgs = new Object[2];
     private Object[] mStopForegroundArgs = new Object[1];
 
-    PersistentNotification(NotificationManager notificationManager) {
+    PersistentNotification(NotificationManager notificationManager, Service service) {
         this.notificationManager = notificationManager;
+        this.service = service;
         try {
-            mStartForeground = getClass().getMethod("startForeground",
+            mStartForeground = service.getClass().getMethod("startForeground",
                     mStartForegroundSignature);
-            mStopForeground = getClass().getMethod("stopForeground",
+            mStopForeground = service.getClass().getMethod("stopForeground",
                     mStopForegroundSignature);
             return;
         } catch (NoSuchMethodException e) {
@@ -42,7 +45,7 @@ class PersistentNotification {
             mStartForeground = mStopForeground = null;
         }
         try {
-            mSetForeground = getClass().getMethod("setForeground",
+            mSetForeground = service.getClass().getMethod("setForeground",
                     mSetForegroundSignature);
         } catch (NoSuchMethodException e) {
             throw new IllegalStateException(
@@ -56,7 +59,7 @@ class PersistentNotification {
 
     void invokeMethod(Method method, Object[] args) {
         try {
-            method.invoke(this, args);
+            method.invoke(service, args);
         } catch (InvocationTargetException e) {
             // Should not happen.
             Log.w("ApiDemos", "Unable to invoke method", e);

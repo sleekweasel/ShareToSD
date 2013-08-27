@@ -1,6 +1,7 @@
 package uk.org.baverstock.sharetosd;
 
 import android.app.*;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Date;
 
 /**
  *  Downloads stuff in the background.
@@ -20,7 +22,7 @@ public class DownloadService extends IntentService
 {
 	public static final int NOTIFICATION_ID = 1;
 	public static StringBuilder log = new StringBuilder();
-    private final NotificationManager notificationManager;
+    private NotificationManager notificationManager;
 
     private Notifier notifier;
     private PersistentNotification peristentNotification;
@@ -29,9 +31,6 @@ public class DownloadService extends IntentService
     public DownloadService()
 	{
 		super("DownloadService");
-        notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        peristentNotification = new PersistentNotification(notificationManager);
-        notifier = new Notifier(notificationManager, peristentNotification);
 	}
 
     @Override
@@ -39,6 +38,14 @@ public class DownloadService extends IntentService
         // Make sure our notification is gone.
         peristentNotification.onDestroy();
         super.onDestroy();
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        peristentNotification = new PersistentNotification(notificationManager, this);
+        notifier = new Notifier(notificationManager, peristentNotification);
     }
 
     @Override
@@ -117,21 +124,27 @@ public class DownloadService extends IntentService
 			}
 		}
 
-		String outcome = "Download failed";
-		if (path != null && inputStream != null && contentType != null)
+        String outcome = "Download failed";
+        ContentValues contentValues = new ContentValues();
+        if (path != null && inputStream != null && contentType != null)
 		{
-			tell("Content-type: " + contentType);
-			path = Environment.getExternalStorageDirectory() + "/ShareToSD" + path;
+            tell("Content-type: " + contentType);
+            path = Environment.getExternalStorageDirectory() + "/ShareToSD" + path;
 
-			File file = copyFromStream(inputStream, path, size);
+            File file = copyFromStream(inputStream, path, size);
 
-			if (file != null)
+            if (file != null)
 			{
-				notifier.setDataAndType(file, contentType);
-				outcome = "Download succeeded";
-			}
-		}
+                notifier.setDataAndType(file, contentType);
+                outcome = "Download succeeded";
+            }
+            contentValues.put(DownloadEventsContract.EVENT_KEY_FILE, file.toString());
+        }
+        contentValues.put(DownloadEventsContract.EVENT_KEY_DATE, new Date().toString());
+        contentValues.put(DownloadEventsContract.EVENT_KEY_URL, uri.toString());
+        contentValues.put(DownloadEventsContract.EVENT_KEY_TYPE, contentType);
 
+        getContentResolver().insert(DownloadEventsContract.EVENT_CONTENT_URL, contentValues);
 		notifier.notifyLast(outcome, this, headline);
 	}
 
