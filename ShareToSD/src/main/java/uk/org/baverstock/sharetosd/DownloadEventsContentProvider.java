@@ -9,6 +9,7 @@ import android.text.TextUtils;
 
 import static uk.org.baverstock.sharetosd.DownloadEventsContentProvider.Match.EVENT_DIR;
 import static uk.org.baverstock.sharetosd.DownloadEventsContentProvider.Match.EVENT_ITEM;
+import static uk.org.baverstock.sharetosd.DownloadEventsContentProvider.Match.NO_MATCH;
 import static uk.org.baverstock.sharetosd.DownloadEventsContract.*;
 
 public class DownloadEventsContentProvider extends ContentProvider {
@@ -29,7 +30,7 @@ public class DownloadEventsContentProvider extends ContentProvider {
         }
     }
 
-    static final UriMatcher matcher = new UriMatcher(Match.NO_MATCH.ordinal());
+    static final UriMatcher matcher = new UriMatcher(NO_MATCH.ordinal());
     static {
         matcher.addURI(AUTHORITY, EVENT_PATH + "/#", EVENT_ITEM.ordinal());
         matcher.addURI(AUTHORITY, EVENT_PATH, EVENT_DIR.ordinal());
@@ -58,7 +59,7 @@ public class DownloadEventsContentProvider extends ContentProvider {
         SQLiteQueryBuilder query = new SQLiteQueryBuilder();
         switch (Match.values()[matcher.match(uri)]) {
             case EVENT_ITEM:
-                query.appendWhere(DownloadEventsContract.EVENT_KEY_ID + "=" + uri.getLastPathSegment());
+                query.appendWhere(EVENT_KEY_ID + "=" + uri.getLastPathSegment());
             case EVENT_DIR:
                 query.setTables(EVENT_TABLE);
                 break;
@@ -67,7 +68,7 @@ public class DownloadEventsContentProvider extends ContentProvider {
         }
 
         String orderBy = TextUtils.isEmpty(sortOrder)
-                                   ? DownloadEventsContract.EVENT_DEFAULT_SORT_ORDER
+                                   ? EVENT_DEFAULT_SORT_ORDER
                                    : sortOrder;
         String groupBy = null;
         String having = null;
@@ -101,7 +102,7 @@ public class DownloadEventsContentProvider extends ContentProvider {
                 count = getWriteableDatabase().delete(EVENT_TABLE, where, whereArgs);
                 break;
             case EVENT_ITEM:
-                String whereClause = DownloadEventsContract.EVENT_KEY_ID + "=" + uri.getLastPathSegment()
+                String whereClause = EVENT_KEY_ID + "=" + uri.getLastPathSegment()
                         + (TextUtils.isEmpty(where) ? "" : " AND (" + where + ')');
                 count = getWriteableDatabase().delete(EVENT_TABLE, whereClause, whereArgs);
                 break;

@@ -30,9 +30,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15f001f8-8b57-47a4-aee7-957b34fe9463" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContentProvider.java" afterPath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContentProvider.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/EventListFragment.java" afterPath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/EventListFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/LogLaunchFragment.java" afterPath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/LogLaunchFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/res/layout/log_launch_fragment.xml" afterPath="$PROJECT_DIR$/ShareToSD/res/layout/log_launch_fragment.xml" />
     </list>
     <ignored path="ShareToSD-parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -135,8 +134,19 @@
       <file leaf-file-name="DownloadEventsContract.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContract.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
+            <state line="19" column="31" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DownloadEventsContentProvider.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContentProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="139" column="0" selection-start="5265" selection-end="5265" vertical-scroll-proportion="1.9788867">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -150,10 +160,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventListFragment.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="EventListFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/EventListFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="0" selection-start="1714" selection-end="1714" vertical-scroll-proportion="0.028790787">
+            <state line="27" column="0" selection-start="913" selection-end="913" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -209,15 +219,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fragment.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/lib/android-sdk-linux/extras/android/support/v4/android-support-v4.jar!/android/support/v4/app/Fragment.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="132" column="16" selection-start="5011" selection-end="5011" vertical-scroll-proportion="-6.76">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -238,7 +239,6 @@
       <list>
         <option value="$PROJECT_DIR$/ShareToSD/res/layout/file_dir_row.xml" />
         <option value="$PROJECT_DIR$/ShareToSD/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContentProvider.java" />
         <option value="$PROJECT_DIR$/ShareToSD/res/layout/empty_list.xml" />
         <option value="$PROJECT_DIR$/ShareToSD/res/layout/event_list_fragment.xml" />
         <option value="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/ShareToSD.java" />
@@ -252,6 +252,7 @@
         <option value="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/LogLaunchFragment.java" />
         <option value="$PROJECT_DIR$/ShareToSD/res/layout/log_launch_fragment.xml" />
         <option value="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/EventListFragment.java" />
+        <option value="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContentProvider.java" />
       </list>
     </option>
   </component>
@@ -1103,13 +1104,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/PersistentNotification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="4" selection-start="997" selection-end="997" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/google/android/android/2.3.3/android-2.3.3.jar!/android/content/ContentResolver.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="104" column="0" selection-start="6895" selection-end="6895" vertical-scroll-proportion="0.0">
@@ -1181,20 +1175,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsOpenHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="13" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0">
@@ -1221,7 +1201,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/EventListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="1714" selection-end="1714" vertical-scroll-proportion="0.028790787">
+        <state line="27" column="0" selection-start="913" selection-end="913" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsOpenHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="31" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContentProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="139" column="0" selection-start="5265" selection-end="5265" vertical-scroll-proportion="1.9788867">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

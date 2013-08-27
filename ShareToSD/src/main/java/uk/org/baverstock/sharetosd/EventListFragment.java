@@ -1,9 +1,5 @@
 package uk.org.baverstock.sharetosd;
 
-/**
- *  */
-
-import android.*;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -18,7 +14,6 @@ import android.support.v4.widget.SimpleCursorAdapter;
 import android.view.*;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.io.File;
 
