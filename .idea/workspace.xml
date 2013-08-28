@@ -30,20 +30,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15f001f8-8b57-47a4-aee7-957b34fe9463" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContentProvider.java" afterPath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContentProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContract.java" afterPath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContract.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsOpenHelper.java" afterPath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsOpenHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadService.java" afterPath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/EventListFragment.java" afterPath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/EventListFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/LogLaunchFragment.java" afterPath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/LogLaunchFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/Notifier.java" afterPath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/Notifier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/PersistentNotification.java" afterPath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/PersistentNotification.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/ShareToSD.java" afterPath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/ShareToSD.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/res/layout/file_dir_row.xml" afterPath="$PROJECT_DIR$/ShareToSD/res/layout/file_dir_row.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ShareToSD-parent.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377636093750" ignored="false" />
+    <file path="/Dummy.txt" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377718892831" ignored="false" />
     <file path="/DownloadService.java" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377640877267" ignored="false" />
     <file path="/ServiceRedirect.java" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377356553173" ignored="false" />
     <file path="/a.dummy" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377358178545" ignored="false" />
@@ -51,21 +45,22 @@
     <file path="/NotificationThingy.java" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377361659078" ignored="false" />
     <file path="/main.xml" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377628807702" ignored="false" />
     <file path="/ShareToSD.java" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377613163971" ignored="false" />
-    <file path="/file_dir_row.xml" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377370824789" ignored="false" />
+    <file path="/file_dir_row.xml" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377724952681" ignored="false" />
     <file path="/DownloadEventsOpenHelper.java" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377640924296" ignored="false" />
     <file path="/DownloadEventsContentProvider.java" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377612061856" ignored="false" />
     <file path="/DownloadEventsContract.java" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377624355270" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377601170121" ignored="false" />
     <file path="/empty_list.xml" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377612383974" ignored="false" />
-    <file path="/LogLaunchFragment.java" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377618260474" ignored="false" />
+    <file path="/LogLaunchFragment.java" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377727111108" ignored="false" />
     <file path="/log_launch_fragment.xml" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377629603051" ignored="false" />
-    <file path="/EventListFragment.java" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377641564722" ignored="false" />
+    <file path="/EventListFragment.java" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377725218485" ignored="false" />
     <file path="$PROJECT_DIR$/ShareToSD/res/layout/event_list_fragment.xml" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377615578910" ignored="false" />
     <file path="/PersistentNotification.java" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377618116603" ignored="false" />
     <file path="$USER_HOME$/lappy/muddy3ah/muddy/src/org/uk/baverstock/muddy/MultiListActivity.java" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377634376327" ignored="false" />
     <file path="$USER_HOME$/lappy/muddy3ah/muddy/src/org/uk/baverstock/muddy/adapters/WorldDbAdapter.java" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377635888653" ignored="false" />
     <file path="/WorldDbAdapter.java" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377635964810" ignored="false" />
     <file path="/file_or_dir.xml" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377637237973" ignored="false" />
+    <file path="/event_item.xml" changelist="15f001f8-8b57-47a4-aee7-957b34fe9463" time="1377722372274" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +75,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -117,7 +113,6 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -127,22 +122,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DownloadEventsContract.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContract.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="13" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DownloadEventsContentProvider.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContentProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="13" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="77" column="0" selection-start="2605" selection-end="2605" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -151,9 +135,7 @@
         <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsOpenHelper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="9" column="13" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,10 +143,20 @@
       <file leaf-file-name="EventListFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/EventListFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="13" selection-start="829" selection-end="829" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="79" column="82" selection-start="3204" selection-end="3204" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="file_dir_row.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ShareToSD/res/layout/file_dir_row.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="0" selection-start="826" selection-end="826" vertical-scroll-proportion="-2.9189188">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -173,9 +165,7 @@
         <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="20" column="13" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -184,28 +174,24 @@
         <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/PersistentNotification.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="10" column="30" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShareToSD.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ShareToSD.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/ShareToSD.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="13" selection-start="198" selection-end="198" vertical-scroll-proportion="0.20153551">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="7" column="13" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogLaunchFragment.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="LogLaunchFragment.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/LogLaunchFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0">
+            <state line="28" column="44" selection-start="923" selection-end="923" vertical-scroll-proportion="0.8">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -217,22 +203,8 @@
         <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/Notifier.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="2" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="log_launch_fragment.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ShareToSD/res/layout/log_launch_fragment.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="52" selection-start="584" selection-end="584" vertical-scroll-proportion="-3.0405405">
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
           </provider>
         </entry>
       </file>
@@ -254,8 +226,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/ShareToSD/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/ShareToSD/res/layout/empty_list.xml" />
         <option value="$PROJECT_DIR$/ShareToSD/res/layout/event_list_fragment.xml" />
         <option value="$PROJECT_DIR$/ShareToSD/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/ShareToSD/res/layout-land/main.xml" />
@@ -265,11 +235,13 @@
         <option value="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContentProvider.java" />
         <option value="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContract.java" />
         <option value="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsOpenHelper.java" />
-        <option value="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/EventListFragment.java" />
         <option value="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/Notifier.java" />
         <option value="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/ShareToSD.java" />
-        <option value="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/LogLaunchFragment.java" />
         <option value="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/PersistentNotification.java" />
+        <option value="$PROJECT_DIR$/ShareToSD/res/layout/event_item.xml" />
+        <option value="$PROJECT_DIR$/ShareToSD/res/layout/file_dir_row.xml" />
+        <option value="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/EventListFragment.java" />
+        <option value="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/LogLaunchFragment.java" />
       </list>
     </option>
   </component>
@@ -314,6 +286,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -805,7 +778,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -821,15 +793,15 @@
     <property name="last_opened_file_path" value="$USER_HOME$/lib/android-sdk-linux/extras/android/support/v4/android-support-v4.jar!/" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -878,19 +850,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -916,6 +875,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1027,9 +999,9 @@
     <frame x="482" y="0" width="1438" height="999" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282532" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3278496" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328777" sideWeight="0.6674501" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328777" sideWeight="0.6745006" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3983549" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1037,19 +1009,19 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3266745" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33254993" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3317702" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20359713" sideWeight="0.6674501" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20359713" sideWeight="0.67215043" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32549942" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294964" sideWeight="0.6717468" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Enso" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Kahlua" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24882942" sideWeight="0.6712018" order="8" side_tool="false" content_ui="combo" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Archetypes" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294964" sideWeight="0.6717468" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282532" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1121,45 +1093,24 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ShareToSD/res/layout/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="38" selection-start="675" selection-end="675" vertical-scroll-proportion="-3.2432432">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/android/android/2.3.3/android-2.3.3.jar!/android/R.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="168" column="32" selection-start="9706" selection-end="9706" vertical-scroll-proportion="-6.92">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/lib/android-sdk-linux/extras/android/support/v4/android-support-v4.jar!/android/support/v4/app/Fragment.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="16" selection-start="5011" selection-end="5011" vertical-scroll-proportion="-6.76">
-          <folding />
-        </state>
+        <state line="132" column="16" selection-start="5011" selection-end="5011" vertical-scroll-proportion="-6.76" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/google/android/android/2.3.3/android-2.3.3.jar!/android/view/ContextMenu.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="21" selection-start="592" selection-end="592" vertical-scroll-proportion="-10.8">
-          <folding />
-        </state>
+        <state line="19" column="21" selection-start="592" selection-end="592" vertical-scroll-proportion="-10.8" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ShareToSD/res/layout-land/main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="37" selection-start="727" selection-end="727" vertical-scroll-proportion="-3.445946">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ShareToSD/res/menu/file_or_dir.xml">
@@ -1170,21 +1121,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ShareToSD/res/layout/log_launch_fragment.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="52" selection-start="584" selection-end="584" vertical-scroll-proportion="-3.0405405">
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContentProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="15" column="52" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1198,60 +1140,65 @@
     <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsOpenHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="13" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="13" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/EventListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="13" selection-start="829" selection-end="829" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/LogLaunchFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/Notifier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/PersistentNotification.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="30" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/ShareToSD.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="198" selection-end="198" vertical-scroll-proportion="0.20153551">
+        <state line="7" column="13" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContentProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="0" selection-start="2605" selection-end="2605" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareToSD/res/layout/file_dir_row.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="826" selection-end="826" vertical-scroll-proportion="-2.9189188">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/EventListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="82" selection-start="3204" selection-end="3204" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/LogLaunchFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="44" selection-start="923" selection-end="923" vertical-scroll-proportion="0.8">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

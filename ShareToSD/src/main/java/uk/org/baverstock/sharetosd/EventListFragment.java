@@ -10,34 +10,27 @@ import android.support.v4.app.ListFragment;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
-import android.support.v4.widget.SimpleCursorAdapter;
+import android.support.v4.widget.CursorAdapter;
+import android.text.format.DateUtils;
 import android.view.*;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.io.File;
+import java.util.Date;
 
-import static uk.org.baverstock.sharetosd.DownloadEventsContract.EVENT_CONTENT_URL;
-import static uk.org.baverstock.sharetosd.DownloadEventsContract.EVENT_KEY_FILE;
-import static uk.org.baverstock.sharetosd.DownloadEventsContract.EVENT_KEY_TYPE;
+import static uk.org.baverstock.sharetosd.DownloadEventsContract.*;
 
 public class EventListFragment extends ListFragment {
 
-    private SimpleCursorAdapter adapter;
+    private CursorAdapter adapter;
 
     public static final String[] FROM_COLUMNS_WITH_ID = new String[]{
             DownloadEventsContract.EVENT_KEY_FILE,
             DownloadEventsContract.EVENT_KEY_URL,
             DownloadEventsContract.EVENT_KEY_DATE,
             DownloadEventsContract.EVENT_KEY_ID
-    };
-    public static final String[] FROM_COLUMNS = new String[]{
-            DownloadEventsContract.EVENT_KEY_URL,
-            DownloadEventsContract.EVENT_KEY_DATE
-    };
-    public static final int[] TO_VIEWS = new int[]{
-            android.R.id.text1,
-            android.R.id.text2
     };
     public static final int EVENT_LOADER = 0;
 
@@ -52,8 +45,28 @@ public class EventListFragment extends ListFragment {
         super.onActivityCreated(savedInstanceState);
 
         Cursor awaitingLoader = null;
-        adapter = new SimpleCursorAdapter(getActivity(), android.R.layout.simple_list_item_2, awaitingLoader,
-                FROM_COLUMNS, TO_VIEWS, 0);
+        adapter = new CursorAdapter(getActivity(), awaitingLoader, 0) {
+
+            @Override
+            public View newView(Context context, Cursor cursor, ViewGroup viewGroup) {
+                return LayoutInflater.from(context).inflate(R.layout.file_dir_row, viewGroup, false);
+            }
+
+            @Override
+            public void bindView(View view, Context context, Cursor cursor) {
+                TextView dateView = (TextView) view.findViewById(R.id.date);
+                TextView nameView = (TextView) view.findViewById(R.id.name);
+                TextView urlView = (TextView) view.findViewById(R.id.url);
+                String thenS = cursor.getString(cursor.getColumnIndex(EVENT_KEY_DATE));
+                long then = new Date(thenS).getTime();
+                dateView.setText(DateUtils.getRelativeTimeSpanString(then, System.currentTimeMillis(), 0, DateUtils.FORMAT_ABBREV_RELATIVE));
+                String name = cursor.getString(cursor.getColumnIndex(EVENT_KEY_FILE));
+                nameView.setText(name);
+                String url = cursor.getString(cursor.getColumnIndex(EVENT_KEY_URL));
+                urlView.setText(url);
+            }
+        };
+
         setListAdapter(adapter);
 
         registerForContextMenu(getListView());

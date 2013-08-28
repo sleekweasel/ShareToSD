@@ -23,8 +23,10 @@ public class LogLaunchFragment extends Fragment {
         final Uri data = intent.getData();
 
         if (data == null) {
+            getView().setVisibility(View.GONE);
             return;
         }
+        getView().setVisibility(View.VISIBLE);
 
         TextView textView = (TextView) getView().findViewById(R.id.log);
         textView.setText(DownloadService.log.toString());
