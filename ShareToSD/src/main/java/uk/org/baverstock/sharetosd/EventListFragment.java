@@ -105,7 +105,8 @@ public class EventListFragment extends ListFragment {
     public boolean onContextItemSelected(MenuItem item) {
         final AdapterView.AdapterContextMenuInfo menuInfo = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         final ContentResolver contentResolver = getActivity().getContentResolver();
-        final Uri itemUrl = EVENT_CONTENT_URL.buildUpon().appendPath("" + menuInfo.id).build();
+        long id = menuInfo.id;
+        final Uri itemUrl = EVENT_CONTENT_URL.buildUpon().appendPath("" + id).build();
         switch (item.getItemId()) {
             case R.id.menu_open_file:
                 openItem(contentResolver, itemUrl);
