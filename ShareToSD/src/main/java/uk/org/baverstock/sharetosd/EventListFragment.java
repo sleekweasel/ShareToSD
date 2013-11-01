@@ -18,7 +18,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.io.File;
-import java.util.Date;
 
 import static uk.org.baverstock.sharetosd.DownloadEventsContract.*;
 
@@ -29,7 +28,7 @@ public class EventListFragment extends ListFragment {
     public static final String[] FROM_COLUMNS_WITH_ID = new String[]{
             DownloadEventsContract.EVENT_KEY_FILE,
             DownloadEventsContract.EVENT_KEY_URL,
-            DownloadEventsContract.EVENT_KEY_DATE,
+            DownloadEventsContract.EVENT_KEY_TIMESTAMP_INTO_DATE_MILLIS,
             DownloadEventsContract.EVENT_KEY_ID
     };
     public static final int EVENT_LOADER = 0;
@@ -57,11 +56,13 @@ public class EventListFragment extends ListFragment {
                 TextView dateView = (TextView) view.findViewById(R.id.date);
                 TextView nameView = (TextView) view.findViewById(R.id.name);
                 TextView urlView = (TextView) view.findViewById(R.id.url);
-                String thenS = cursor.getString(cursor.getColumnIndex(EVENT_KEY_DATE));
-                long then = new Date(thenS).getTime();
+
+                long then = cursor.getLong(cursor.getColumnIndex(EVENT_KEY_TIMESTAMP_QUA_MILLIS));
                 dateView.setText(DateUtils.getRelativeTimeSpanString(then, System.currentTimeMillis(), 0, DateUtils.FORMAT_ABBREV_RELATIVE));
+
                 String name = cursor.getString(cursor.getColumnIndex(EVENT_KEY_FILE));
                 nameView.setText(name);
+
                 String url = cursor.getString(cursor.getColumnIndex(EVENT_KEY_URL));
                 urlView.setText(url);
             }

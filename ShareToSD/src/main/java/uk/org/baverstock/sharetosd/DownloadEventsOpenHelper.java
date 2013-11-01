@@ -16,7 +16,7 @@ public class DownloadEventsOpenHelper extends SQLiteOpenHelper {
                     EVENT_KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     EVENT_KEY_URL + " TEXT, " +
                     EVENT_KEY_TYPE + " TEXT, " +
-                    EVENT_KEY_DATE + " DATE, " +
+                    EVENT_KEY_TIMESTAMP_QUA_TIMESTAMP + " TIMESTAMP NOT NULL DEFAULT current_timestamp, " +
                     EVENT_KEY_FILE + " TEXT);";
 
     DownloadEventsOpenHelper(Context context) {

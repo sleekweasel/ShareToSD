@@ -12,7 +12,6 @@ import android.widget.Toast;
 import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.Date;
 
 /**
  * Downloads stuff in the background.
@@ -122,7 +121,7 @@ public class DownloadService extends IntentService {
             }
             contentValues.put(DownloadEventsContract.EVENT_KEY_FILE, file.toString());
         }
-        contentValues.put(DownloadEventsContract.EVENT_KEY_DATE, new Date().toString());
+        // contentValues.put(TIMESTAMP, defaults to 'now')
         contentValues.put(DownloadEventsContract.EVENT_KEY_URL, uri.toString());
         contentValues.put(DownloadEventsContract.EVENT_KEY_TYPE, contentType);
 
