@@ -155,7 +155,7 @@ public class DownloadService extends IntentService {
             }
             tell("Downloading... " + outFile);
             OutputStream outputStream = new FileOutputStream(outFile);
-            byte bytes[] = new byte[16365];
+            byte bytes[] = new byte[16 * 1024];
             int len;
             long seen = 0;
             long lastDisplayed = System.currentTimeMillis();
@@ -212,6 +212,6 @@ public class DownloadService extends IntentService {
     }
 
     private void tell(final String s) {
-        log.append("* " + s + "\n");
+        log.append(String.format("* %s\n", s));
     }
 }
