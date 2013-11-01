@@ -31,11 +31,6 @@
   <component name="ChangeListManager">
     <list default="true" id="15f001f8-8b57-47a4-aee7-957b34fe9463" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContract.java" afterPath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContract.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsOpenHelper.java" afterPath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsOpenHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadService.java" afterPath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/EventListFragment.java" afterPath="$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/EventListFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShareToSD/ShareToSD.iml" afterPath="$PROJECT_DIR$/ShareToSD/ShareToSD.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ShareToSD-parent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -174,7 +169,7 @@
       <file leaf-file-name="DownloadEventsContract.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContract.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="51" selection-start="259" selection-end="259" vertical-scroll-proportion="0.20669292">
+            <state line="10" column="12" selection-start="450" selection-end="450" vertical-scroll-proportion="0.28790787">
               <folding />
             </state>
           </provider>
@@ -1035,9 +1030,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="237" y="0" width="1683" height="994" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3270142" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3270142" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863274" sideWeight="0.671801" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1253,7 +1248,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ShareToSD/src/main/java/uk/org/baverstock/sharetosd/DownloadEventsContract.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="51" selection-start="259" selection-end="259" vertical-scroll-proportion="0.20669292">
+        <state line="10" column="12" selection-start="450" selection-end="450" vertical-scroll-proportion="0.28790787">
           <folding />
         </state>
       </provider>
